@@ -10,11 +10,11 @@ public class Search2DMatrix {
         if (rows == 0 || col == 0) {
             return false;
         }
-        int size = rows * col;
+        int size = rows * col;      //find total length
         int start = 0, end = size - 1;
         while (start <= end) {
-            int mid = (start + end) / 2;
-            int r = mid / col, c = mid % col;
+            int mid = (start + end) / 2;    //find mid index
+            int r = mid / col, c = mid % col;   // calculate exact row x col to locate the mid indexed value
             if (matrix[r][c] > target) {
                 end = mid - 1;
             } else if (matrix[r][c] < target) {
