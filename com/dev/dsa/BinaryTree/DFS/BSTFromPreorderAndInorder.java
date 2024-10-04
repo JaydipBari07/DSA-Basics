@@ -1,16 +1,22 @@
-package com.dev.dsa.BinaryTree;
+package com.dev.dsa.BinaryTree.DFS;
+
+import com.dev.dsa.BinaryTree.BSTUtils;
+import com.dev.dsa.BinaryTree.TreeNode;
 
 public class BSTFromPreorderAndInorder {
 
     public static TreeNode buildTree(int[] preorder, int[] inorder) {
-        return build(preorder, inorder, 0, preorder.length, 0, inorder.length);
+        return build(preorder, inorder, 0, preorder.length-1, 0, inorder.length-1);
     }
 
     public static TreeNode build(int[] preorder, int[] inorder, int ps, int pe, int is, int ie) {
-        if (ps < preorder.length && pe <= preorder.length && is < inorder.length && ie <= inorder.length) {
+        if(ps==pe && is==ie){
+            return new TreeNode(preorder[ps]);
+        }
+        if (ps < preorder.length && pe >= ps && is < inorder.length && ie >= is) {
             TreeNode root = new TreeNode(preorder[ps]);
             int mid = 0;
-            for (int i = is; i < ie; i++) {
+            for (int i = is; i <= ie; i++) {
                 if (preorder[ps] == inorder[i]) {
                     mid = i;
                 }
@@ -23,8 +29,8 @@ public class BSTFromPreorderAndInorder {
     }
 
     public static void main(String[] args) {
-        int[] pre = {1, 2, 3, 4};
-        int[] in = {2, 1, 3, 4};
+        int[] pre = {1,2};
+        int[] in = {2,1};
         BSTUtils.printBSTInAscendingOrder((buildTree(pre, in)));
     }
 }
