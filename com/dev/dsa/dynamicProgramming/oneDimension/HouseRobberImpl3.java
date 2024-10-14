@@ -1,4 +1,4 @@
-package com.dev.dsa.dynamicProgramming;
+package com.dev.dsa.dynamicProgramming.oneDimension;
 
 public class HouseRobberImpl3 {
 

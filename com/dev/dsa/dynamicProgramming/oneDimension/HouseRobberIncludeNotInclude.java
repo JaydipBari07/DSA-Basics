@@ -1,9 +1,6 @@
-package com.dev.dsa.dynamicProgramming;
+package com.dev.dsa.dynamicProgramming.oneDimension;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 // This implementation works only without cache. And without cache implementation gives time limit exceeded error.
 public class HouseRobberIncludeNotInclude {
