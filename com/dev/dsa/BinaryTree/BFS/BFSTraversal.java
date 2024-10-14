@@ -4,11 +4,9 @@ import com.dev.dsa.BinaryTree.BSTUtils;
 import com.dev.dsa.BinaryTree.TreeNode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
-public class DFSTraversal {
+public class BFSTraversal {
 
     static class ListNode {
         TreeNode nodeVal;

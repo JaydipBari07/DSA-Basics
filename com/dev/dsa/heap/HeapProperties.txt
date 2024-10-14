@@ -1,0 +1,8 @@
+Also called as Priority Queue
+
+leftChild = 2 * i
+rightChild = 2 * i + 1
+parent = i / 2
+
+Structure Property: No level in tree in middle should have null child. Only last level can have null leaf nodes
+Order Property: Every node should be less than or equal to its descendants.
