@@ -99,7 +99,8 @@ public class MinHeap {
 //        System.out.println(heap.pop());
 //        System.out.println(heap.heap);
 //        System.out.println(heap.top());
-        heap.heapify(Arrays.asList(3, 2, 1, 4, 1, 5));
+//        int[] nums = new int[]{3, 2, 1, 5, 6, 4};
+        heap.heapify(Arrays.asList(3, 2, 1, 5, 6, 4));
         System.out.println(heap.heap);
     }
 }

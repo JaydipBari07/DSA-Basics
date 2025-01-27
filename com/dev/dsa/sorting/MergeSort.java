@@ -34,7 +34,7 @@ public class MergeSort {
     public static void merge(List<Pair> list, int start, int mid, int end) {
         int i = start, j = mid + 1;
 //        System.out.println(i + ":" + j);
-        while (i <= mid && j < list.size()) {
+        while (i <= mid && j < end) {
             if (list.get(i).key > list.get(j).key) {
                 insertElement(list, i, j);
             }
